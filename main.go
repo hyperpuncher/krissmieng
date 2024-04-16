@@ -8,9 +8,11 @@ import (
 )
 
 func main() {
-	hello := components.Hello()
+	assets := http.FileServer(http.Dir("assets"))
+	page := components.Page()
 
-	http.Handle("/", templ.Handler(hello))
+	http.Handle("/", templ.Handler(page))
+	http.Handle("/assets/", http.StripPrefix("/assets/", assets))
 
 	http.ListenAndServe(":6969", nil)
 }

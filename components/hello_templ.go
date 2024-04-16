@@ -10,7 +10,7 @@ import "context"
 import "io"
 import "bytes"
 
-func Hello() templ.Component {
+func hello() templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
 		if !templ_7745c5c3_IsBuffer {
@@ -23,7 +23,7 @@ func Hello() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div>Hello</div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex flex-col lg:gap-20 gap-10 lg:mx-auto mx-10\"><div><h1 class=\"lg:ml-20 lg:text-8xl text-5xl font-bold\">Привет, <br>я Кристина</h1></div><div class=\"flex justify-end\"><h2 class=\"lg:mr-20 lg:w-1/2 lg:text-4xl text-xl font-bold\">- репетитор английского языка с 2014 года. Я выбрала путь преподавания, чтобы вдохновлять и поддерживать людей в их стремлении к самосовершенствованию.  Изучение новых языков открывает перед вами весь мир и дарит возможность открыть новые горизонты личностного роста. Моя миссия — помочь вам стать увереннее и счастливее!</h2></div><img class=\"rounded-lg\" src=\"assets/images/kris.jpg\"><div class=\"flex justify-end\"><p class=\"lg:mr-20 lg:w-2/3 lg:text-3xl text-xl\">Я закончила Минский Государственный Лингвистический университет, в 2023 году успешно прошла курс английского с преподавателем из Британии. Прохожу мастер-классы у топовых преподавателей и продолжаю прокачивать свои знания каждый день. Мои ученики успешно устраиваются на работу в ведущие международные компании, переезжают за границу и получают образование в престижных университетах.</p></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
