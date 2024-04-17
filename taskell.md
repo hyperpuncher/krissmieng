@@ -1,5 +1,8 @@
 ## To Do
 
+- examples
+- info
+
 ## Doing
 
 - animations
