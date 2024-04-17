@@ -37,7 +37,7 @@ func reviews() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"text-xl flex flex-col xl:w-2/3 justify-center xl:mx-auto mx-1\"><h2 class=\"text-3xl text-center font-bold mb-5\">Отзывы</h2>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"text-lg flex flex-col xl:w-2/3 justify-center xl:mx-auto mx-1\"><h2 class=\"text-3xl text-center font-bold mb-5\">Отзывы</h2>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
