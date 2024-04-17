@@ -1,13 +1,14 @@
 ## To Do
 
-- animations
+- redo reviews components
 
 ## Doing
 
-- deploy
+- animations
 
 ## Done
 
 - daisyui
 - mvp
 - static build
+- deploy
