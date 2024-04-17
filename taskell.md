@@ -1,11 +1,13 @@
 ## To Do
 
-- deploy
+- animations
 
 ## Doing
 
+- deploy
 
 ## Done
 
 - daisyui
 - mvp
+- static build

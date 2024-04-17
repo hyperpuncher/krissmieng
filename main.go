@@ -1,18 +1,21 @@
 package main
 
 import (
-	"net/http"
+	"context"
+	"log"
+	"os"
 
-	"github.com/a-h/templ"
 	"github.com/hyperpuncher/krissmieng/components"
 )
 
 func main() {
-	assets := http.FileServer(http.Dir("assets"))
-	page := components.Page()
+	f, err := os.Create("krissmieng.html")
+	if err != nil {
+		log.Fatalf("failed to create output file: %v", err)
+	}
 
-	http.Handle("/", templ.Handler(page))
-	http.Handle("/assets/", http.StripPrefix("/assets/", assets))
-
-	http.ListenAndServe(":6969", nil)
+	err = components.Page().Render(context.Background(), f)
+	if err != nil {
+		log.Fatalf("failed to write output file: %v", err)
+	}
 }
