@@ -1,7 +1,5 @@
 ## To Do
 
-- redo reviews components
-
 ## Doing
 
 - animations
@@ -12,3 +10,4 @@
 - mvp
 - static build
 - deploy
+- redo reviews components
