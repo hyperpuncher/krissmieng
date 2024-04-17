@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	f, err := os.Create("krissmieng.html")
+	f, err := os.Create("index.html")
 	if err != nil {
 		log.Fatalf("failed to create output file: %v", err)
 	}
