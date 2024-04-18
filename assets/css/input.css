@@ -8,51 +8,53 @@
     src: url(../fonts/Montserrat-VariableFont_wght.ttf);
     font-display: swap;
   }
-body {
-  overflow-x: hidden;
-}
-
-@keyframes scale {
-  0%,
-  100% {
-    transform: scale(1);
   html {
     font-family: "Montserrat", sans-serif;
   }
-  50% {
-    transform: scale(1.1);
+  body {
+    overflow-x: hidden;
   }
-}
 
-#hero {
-  animation: scale linear;
-  animation-timeline: view();
-  animation-range: contain;
-}
-
-@keyframes slide-chat {
-  to {
-    opacity: 1;
-    transform: translateX(0);
+  @keyframes scale {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
   }
-}
 
-.chat-start,
-.chat-end {
-  opacity: 0;
-  animation: slide-chat ease forwards;
-  animation-timeline: view();
-  animation-range: cover 10% contain 15%;
-}
-
-@keyframes scroll {
-  to {
-    transform: translateX(-100%);
+  #hero {
+    animation: scale linear;
+    animation-timeline: view();
+    animation-range: contain;
   }
-}
 
-.carousel-item {
-  transform: translateX(100%);
-  animation: scroll linear forwards;
-  animation-timeline: scroll(root);
+  @keyframes slide-chat {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .chat-start,
+  .chat-end {
+    opacity: 0;
+    animation: slide-chat ease forwards;
+    animation-timeline: view();
+    animation-range: cover 10% contain 15%;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .carousel-item {
+    transform: translateX(100%);
+    animation: scroll linear forwards;
+    animation-timeline: scroll(root);
+  }
 }
