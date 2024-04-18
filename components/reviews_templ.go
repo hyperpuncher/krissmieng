@@ -43,7 +43,7 @@ func reviews() templ.Component {
 		}
 		for i, review := range reviews_text {
 			if i%2 == 0 {
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"chat chat-end ml-20 drop-shadow-md\"><div class=\"chat-bubble chat-bubble-accent max-w-4xl\">")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"chat chat-end ml-20 drop-shadow-md translate-x-1/2\"><div class=\"chat-bubble chat-bubble-accent max-w-4xl\">")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -61,7 +61,7 @@ func reviews() templ.Component {
 					return templ_7745c5c3_Err
 				}
 			} else {
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"chat chat-start mr-20 drop-shadow-md\"><div class=\"chat-bubble chat-bubble-secondary max-w-4xl\">")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"chat chat-start mr-20 drop-shadow-md -translate-x-1/2\"><div class=\"chat-bubble chat-bubble-secondary max-w-4xl\">")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}

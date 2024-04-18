@@ -1,11 +1,9 @@
 ## To Do
 
-- examples
-- info
 
 ## Doing
 
-- animations
+- examples
 
 ## Done
 
@@ -14,3 +12,5 @@
 - static build
 - deploy
 - redo reviews components
+- animations
+- info

@@ -3,14 +3,61 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: 'Montserrat';
-        src: url(assets/fonts/montserrat-cyrillic-400-normal.woff2) format('woff2');
-        font-style: normal;
-        font-display: swap;
-    }
+  @font-face {
+    font-family: "Montserrat";
+    src: url(assets/fonts/montserrat-cyrillic-400-normal.woff2) format("woff2");
+    font-style: normal;
+    font-display: swap;
+  }
 }
 
 html {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+#hero {
+  animation: scale linear;
+  animation-timeline: view();
+  animation-range: contain;
+}
+
+@keyframes slide-chat {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.chat-start,
+.chat-end {
+  opacity: 0;
+  animation: slide-chat ease forwards;
+  animation-timeline: view();
+  animation-range: cover 10% contain 15%;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel-item {
+  transform: translateX(100%);
+  animation: scroll linear forwards;
+  animation-timeline: scroll(root);
 }
