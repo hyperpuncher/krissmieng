@@ -558,20 +558,14 @@ body {
 }
 
 @keyframes scale {
-  0%,
-    100% {
-    transform: scale(1);
-  }
-
   50% {
     transform: scale(1.1);
   }
 }
 
 #hero {
-  animation: scale linear;
+  animation: scale linear forwards;
   animation-timeline: view();
-  animation-range: contain;
 }
 
 @keyframes slide-chat {
@@ -1642,6 +1636,12 @@ body {
 .drop-shadow-md {
   --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 @media (min-width: 640px) {

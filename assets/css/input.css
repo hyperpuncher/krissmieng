@@ -16,19 +16,14 @@
   }
 
   @keyframes scale {
-    0%,
-    100% {
-      transform: scale(1);
-    }
     50% {
       transform: scale(1.1);
     }
   }
 
   #hero {
-    animation: scale linear;
+    animation: scale linear forwards;
     animation-timeline: view();
-    animation-range: contain;
   }
 
   @keyframes slide-chat {
