@@ -10,6 +10,26 @@ import "context"
 import "io"
 import "bytes"
 
+import (
+	"log"
+	"os"
+)
+
+func getImages() []string {
+	images := []string{}
+
+	c, err := os.ReadDir("assets/images/examples")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, entry := range c {
+		images = append(images, entry.Name())
+	}
+
+	return images
+}
+
 func examples() templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
@@ -23,7 +43,30 @@ func examples() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"carousel carousel-center p-4 space-x-4 w-full transition-all\"><div class=\"carousel-item\"><img src=\"https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg\" class=\"rounded-box\"></div><div class=\"carousel-item\"><img src=\"https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg\" class=\"rounded-box\"></div><div class=\"carousel-item\"><img src=\"https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg\" class=\"rounded-box\"></div><div class=\"carousel-item\"><img src=\"https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg\" class=\"rounded-box\"></div><div class=\"carousel-item\"><img src=\"https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg\" class=\"rounded-box\"></div><div class=\"carousel-item\"><img src=\"https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg\" class=\"rounded-box\"></div><div class=\"carousel-item\"><img src=\"https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg\" class=\"rounded-box\"></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"carousel carousel-center p-4 space-x-4\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		for _, image := range getImages() {
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"carousel-item\"><img src=\"")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			var templ_7745c5c3_Var2 string
+			templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs("assets/images/examples/" + image)
+			if templ_7745c5c3_Err != nil {
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `components/examples.templ`, Line: 27, Col: 48}
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" class=\"rounded-box w-80 sm:w-96\"></div>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

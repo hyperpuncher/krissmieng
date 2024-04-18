@@ -1477,8 +1477,8 @@ body {
   display: table;
 }
 
-.w-full {
-  width: 100%;
+.w-80 {
+  width: 20rem;
 }
 
 .max-w-4xl {
@@ -1638,12 +1638,6 @@ body {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 @media (min-width: 640px) {
   .sm\:table-lg :not(thead):not(tfoot) tr {
     font-size: 1rem;
@@ -1655,6 +1649,10 @@ body {
     padding-right: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .sm\:w-96 {
+    width: 24rem;
   }
 
   .sm\:flex-row {
