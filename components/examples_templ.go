@@ -13,6 +13,7 @@ import "bytes"
 import (
 	"log"
 	"os"
+	"strings"
 )
 
 func getImages() []string {
@@ -24,7 +25,9 @@ func getImages() []string {
 	}
 
 	for _, entry := range c {
-		images = append(images, entry.Name())
+		if strings.Contains(entry.Name(), "cropped") {
+			images = append(images, entry.Name())
+		}
 	}
 
 	return images
@@ -48,20 +51,20 @@ func examples() templ.Component {
 			return templ_7745c5c3_Err
 		}
 		for _, image := range getImages() {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"carousel-item md:animate-scroll md:timeline-scroll\"><img src=\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"carousel-item md:animate-scroll md:timeline-scroll md:translate-x-full\"><img src=\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var2 string
 			templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs("assets/images/examples/" + image)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `components/examples.templ`, Line: 27, Col: 48}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `components/examples.templ`, Line: 30, Col: 48}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" class=\"rounded-box w-80 sm:w-96\"></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" class=\"rounded-box w-80 sm:w-96\" alt=\"Пример упражнений\"></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
