@@ -1,9 +1,12 @@
 ## To Do
 
+- fix overflow
+- fix mobile animations
+- compress images
 
 ## Doing
 
-- examples
+- fix minify
 
 ## Done
 
@@ -14,3 +17,5 @@
 - redo reviews components
 - animations
 - info
+- examples
+- minify fonts
