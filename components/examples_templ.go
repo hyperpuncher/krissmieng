@@ -64,7 +64,7 @@ func examples() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" class=\"rounded-box w-80 sm:w-96\" loading=\"lazy\" alt=\"Пример упражнений\"></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" class=\"rounded-box w-80 h-auto sm:w-96\" loading=\"lazy\" alt=\"Пример упражнений\"></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
