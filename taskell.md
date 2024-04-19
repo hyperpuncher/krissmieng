@@ -1,6 +1,5 @@
 ## To Do
 
-- fix mobile animations
 - compress images
 
 ## Doing
@@ -19,3 +18,4 @@
 - examples
 - minify fonts
 - fix minify
+- fix mobile animations
