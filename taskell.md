@@ -3,7 +3,6 @@
 
 ## Doing
 
-- fix overflow
 
 ## Done
 
@@ -19,3 +18,4 @@
 - fix minify
 - fix mobile animations
 - compress images
+- fix overflow
