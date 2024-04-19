@@ -36,14 +36,14 @@
   }
 }
 
-.carousel-item {
-  transform: translateX(100%);
-  animation-timeline: scroll(root);
-}
+@layer utilities {
+  .timeline-view {
+    animation-timeline: view();
+  }
 
-#hero,
-.chat {
-  animation-timeline: view();
+  .timeline-scroll {
+    animation-timeline: scroll(root);
+  }
 }
 
 .chat {
