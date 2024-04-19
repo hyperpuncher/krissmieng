@@ -1,12 +1,11 @@
 ## To Do
 
-- fix overflow
 - fix mobile animations
 - compress images
 
 ## Doing
 
-- fix minify
+- fix overflow
 
 ## Done
 
@@ -19,3 +18,4 @@
 - info
 - examples
 - minify fonts
+- fix minify

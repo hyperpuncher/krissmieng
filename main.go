@@ -13,6 +13,7 @@ import (
 
 func main() {
 	createHtml()
+	// serveHtml()
 }
 
 func createHtml() {

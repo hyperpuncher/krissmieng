@@ -34,42 +34,18 @@
   body {
     overflow-x: hidden;
   }
+}
 
-  @keyframes scale {
-    50% {
-      transform: scale(1.1);
-    }
-  }
+.carousel-item {
+  transform: translateX(100%);
+  animation-timeline: scroll(root);
+}
 
-  #hero {
-    animation: scale linear forwards;
-    animation-timeline: view();
-  }
+#hero,
+.chat {
+  animation-timeline: view();
+}
 
-  @keyframes slide-chat {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  .chat-start,
-  .chat-end {
-    opacity: 0;
-    animation: slide-chat ease forwards;
-    animation-timeline: view();
-    animation-range: cover 10% contain 15%;
-  }
-
-  @keyframes scroll {
-    to {
-      transform: translateX(-100%);
-    }
-  }
-
-  .carousel-item {
-    transform: translateX(100%);
-    animation: scroll linear forwards;
-    animation-timeline: scroll(root);
-  }
+.chat {
+  animation-range: cover 10% contain 15%;
 }

@@ -19,13 +19,13 @@ templ reviews() {
 		<h2 class="text-3xl text-center font-bold mb-5">Отзывы</h2>
 		for i, review := range reviews_text {
 			if i%2 == 0 {
-				<div class="chat chat-end ml-20 drop-shadow-md translate-x-1/2">
+				<div class="animate-slide-chat opacity-0 chat chat-end ml-20 drop-shadow-md translate-x-1/2">
 					<div class="chat-bubble chat-bubble-accent max-w-4xl">
 						{ review }
 					</div>
 				</div>
 			} else {
-				<div class="chat chat-start mr-20 drop-shadow-md -translate-x-1/2">
+				<div class="animate-slide-chat opacity-0 chat chat-start mr-20 drop-shadow-md -translate-x-1/2">
 					<div class="chat-bubble chat-bubble-secondary max-w-4xl">
 						{ review }
 					</div>

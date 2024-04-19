@@ -3,6 +3,5 @@ run:
 
 build:
 	@templ generate
-	@tailwindcss-daisyui -i assets/css/input.css -o assets/css/output.css
-	# @tailwindcss-daisyui -i assets/css/input.css -o assets/css/output.css --minify
+	@tailwindcss-daisyui -i assets/css/input.css -o assets/css/output.css --minify
 	@go run main.go

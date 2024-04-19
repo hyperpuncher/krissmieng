@@ -9,7 +9,6 @@ module.exports = {
 					"25%, 75%": { transform: "rotate(10deg)" },
 				},
 				zoom: {
-					"0%": { transform: "scale(1)" },
 					"50%": { transform: "scale(1.1)" },
 				},
 				"slide-chat": {
@@ -24,9 +23,9 @@ module.exports = {
 			},
 			animation: {
 				wiggle: "wiggle 1s ease-in-out",
-				zoom: "scale linear",
-				"slide-chat": "slide-chat ease forwards",
-				scroll: "scroll linear forwards",
+				zoom: "zoom linear both",
+				"slide-chat": "slide-chat ease both",
+				scroll: "scroll linear both",
 			},
 		},
 	},
