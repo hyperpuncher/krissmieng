@@ -1,6 +1,5 @@
 ## To Do
 
-- compress images
 
 ## Doing
 
@@ -19,3 +18,4 @@
 - minify fonts
 - fix minify
 - fix mobile animations
+- compress images
