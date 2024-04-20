@@ -24,12 +24,12 @@ func getImages() []string {
 }
 
 templ examples() {
-	<div class="carousel carousel-center p-4 space-x-4">
+	<div class="p-4 space-x-4 carousel carousel-center">
 		for _, image := range getImages() {
-			<div class="carousel-item md:animate-scroll md:timeline-scroll md:translate-x-full">
+			<div class="md:translate-x-full carousel-item md:animate-scroll md:timeline-scroll">
 				<img
 					src={ "assets/images/examples/" + image }
-					class="rounded-box h-auto w-80 sm:h-64 sm:w-96"
+					class="w-80 h-auto sm:w-96 sm:h-64 rounded-box"
 					loading="lazy"
 					alt="Пример упражнений"
 				/>

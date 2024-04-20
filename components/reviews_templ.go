@@ -37,13 +37,13 @@ func reviews() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"text-lg flex flex-col xl:w-2/3 justify-center xl:mx-auto mx-1\"><h2 class=\"text-3xl text-center font-bold mb-5\">Отзывы</h2>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex flex-col justify-center mx-1 text-lg xl:mx-auto xl:w-2/3\"><h2 class=\"mb-5 text-3xl font-bold text-center\">Отзывы</h2>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		for i, review := range reviews_text {
 			if i%2 == 0 {
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"animate-slide-chat timeline-view opacity-0 chat chat-end ml-20 drop-shadow-md translate-x-1/2\"><div class=\"chat-bubble chat-bubble-accent max-w-4xl\">")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"ml-20 opacity-0 translate-x-1/2 animate-slide-chat timeline-view chat chat-end drop-shadow-md\"><div class=\"max-w-4xl chat-bubble chat-bubble-accent\">")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -61,7 +61,7 @@ func reviews() templ.Component {
 					return templ_7745c5c3_Err
 				}
 			} else {
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"animate-slide-chat timeline-view opacity-0 chat chat-start mr-20 drop-shadow-md -translate-x-1/2\"><div class=\"chat-bubble chat-bubble-secondary max-w-4xl\">")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"mr-20 opacity-0 -translate-x-1/2 animate-slide-chat timeline-view chat chat-start drop-shadow-md\"><div class=\"max-w-4xl chat-bubble chat-bubble-secondary\">")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
