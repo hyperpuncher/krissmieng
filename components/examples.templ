@@ -30,11 +30,11 @@ templ examples() {
 			<div id={ "example-" + strconv.Itoa(i) } class="relative w-full carousel-item">
 				<img
 					src={ "assets/images/examples/" + image }
-					class="rounded-box"
+					class="w-full h-auto rounded-box"
 					loading="lazy"
 					alt="Пример упражнений"
 				/>
-				<div class="flex absolute right-5 left-5 top-1/2 justify-between">
+				<div class="flex absolute right-5 left-5 top-1/2 justify-between transform -translate-y-1/2">
 					switch i {
 						case 0:
 							<a href={ templ.URL("#example-" + strconv.Itoa(len(getImages())-1)) } class="btn btn-circle">❮</a>

@@ -78,7 +78,7 @@ func examples() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" class=\"rounded-box\" loading=\"lazy\" alt=\"Пример упражнений\"><div class=\"flex absolute right-5 left-5 top-1/2 justify-between\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" class=\"w-full h-auto rounded-box\" loading=\"lazy\" alt=\"Пример упражнений\"><div class=\"flex absolute right-5 left-5 top-1/2 justify-between transform -translate-y-1/2\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
