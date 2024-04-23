@@ -17,15 +17,11 @@ export default {
 						transform: "translateX(0)",
 					},
 				},
-				scroll: {
-					to: { transform: "translateX(-100%)" },
-				},
 			},
 			animation: {
 				wiggle: "wiggle 1s ease-in-out",
 				zoom: "zoom linear both",
 				"slide-chat": "slide-chat ease both",
-				scroll: "scroll linear both",
 			},
 		},
 	},
