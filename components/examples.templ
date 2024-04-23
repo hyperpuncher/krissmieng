@@ -37,7 +37,7 @@ templ examples() {
 				<div class="flex absolute right-5 left-5 top-1/2 justify-between transform -translate-y-1/2">
 					switch i {
 						case 0:
-							<a href={ templ.URL("#example-" + strconv.Itoa(len(getImages())-1)) } class="btn btn-circle">❮</a>
+							<a href={ templ.URL("#example-" + strconv.Itoa(len(getImages())-1)) } class="btn btn-circle btn-sm">❮</a>
 							<a href={ templ.URL("#example-" + strconv.Itoa(i+1)) } class="btn btn-circle">❯</a>
 						case len(getImages())-1:
 							<a href={ templ.URL("#example-" + strconv.Itoa(i-1)) } class="btn btn-circle">❮</a>
