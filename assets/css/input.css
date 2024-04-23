@@ -40,10 +40,6 @@
   .timeline-view {
     animation-timeline: view();
   }
-
-  .timeline-scroll {
-    animation-timeline: scroll(root);
-  }
 }
 
 .chat {
