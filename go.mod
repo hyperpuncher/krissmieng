@@ -1,5 +1,7 @@
 module github.com/hyperpuncher/krissmieng
 
-go 1.22.2
+go 1.23
 
-require github.com/a-h/templ v0.2.747
+toolchain go1.23.6
+
+require github.com/a-h/templ v0.3.833
